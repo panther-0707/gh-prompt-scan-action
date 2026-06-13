@@ -7,8 +7,8 @@ input can reach AI steps or shell commands in your CI pipeline.
 ## Usage
 
 ```yaml
-name: Security scan
-on: [pull_request]
+name: gh-prompt-scan
+on: [push, pull_request]
 
 jobs:
   scan:
@@ -17,6 +17,9 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - uses: panther-0707/gh-prompt-scan-action@v1
 ```
 
