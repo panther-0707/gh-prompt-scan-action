@@ -1,6 +1,8 @@
 # gh-prompt-scan Action
 
-Automatically scan your GitHub Actions workflows for prompt injection vulnerabilities on every pull request.
+Static analysis tool that scans your GitHub Actions workflow files for 
+prompt injection vulnerabilities - detecting when attacker - controlled 
+input can reach AI steps or shell commands in your CI pipeline.
 
 ## Usage
 
