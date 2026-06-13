@@ -1,0 +1,31 @@
+name: gh-prompt-scan
+description: >
+  Detect prompt injection and LLM-induced security risks in GitHub Actions
+  CI/CD workflows. Based on research by Ruan et al. (arXiv:2605.05969).
+author: panther-0707
+
+branding:
+  icon: shield
+  color: red
+
+inputs:
+  fail-on:
+    description: Minimum severity that causes the check to fail
+    required: false
+    default: high
+  paths:
+    description: Path to repository root to scan
+    required: false
+    default: .
+
+runs:
+  using: composite
+  steps:
+    - name: Install gh-prompt-scan
+      run: pip install gh-prompt-scan --quiet
+      shell: bash
+
+    - name: Run gh-prompt-scan
+      run: |
+        gh-prompt-scan scan --path "${{ inputs.paths }}"
+      shell: bash
