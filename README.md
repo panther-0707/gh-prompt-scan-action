@@ -39,7 +39,7 @@ Based on the Heimdallr research paper (arXiv:2605.05969).
 | Input | Default | Description |
 |-------|---------|-------------|
 | `paths` | `.` | Path to repo root to scan |
-| `fail-on` | `high` | Minimum severity to fail the build |
+| `fail-on` | `medium` | Minimum severity to fail the build |
 
 ## Links
 
