@@ -1,7 +1,6 @@
 name: gh-prompt-scan
 description: >
-  Detect prompt injection and LLM-induced security risks in GitHub Actions
-  CI/CD workflows. Based on research by Ruan et al. (arXiv:2605.05969).
+  Detect prompt injection vulnerabilities in AI-integrated GitHub Actions workflows.
 author: panther-0707
 
 branding:
